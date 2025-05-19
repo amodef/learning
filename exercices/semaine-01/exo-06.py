@@ -1,8 +1,13 @@
 # Exercice 6 : Affichage avec délai
-# Affiche : "Chargement ." -> "Chargement .." -> "Chargement ..." avec 1s d'attente
 
+# ✅ Exemple guidé :
 import time
 
-for i in range(1, 4):
-    print("Chargement" + "." * i)
-    time.sleep(1)
+for i in range(0, 101, 3):
+    print(f"Téléchargement : {i}%")
+    time.sleep(0.1)
+
+# 🎯 À toi de jouer :
+# Affiche une animation de "Téléchargement" avec un compteur :
+# Exemple : "Téléchargement : 3%", "Téléchargement : 6%"... jusqu'à 100%
+# 💡 Indice : boucle `for`, `range(0, 101, 3)`, et `sleep(0.1)`
