@@ -1,19 +1,8 @@
-# Exercice 1 : Lister les fichiers modifiés récemment dans un dossier
-import os
-import time
+# Exercice 1 : Bonjour à toi
+# Écris une fonction saluer(nom) qui affiche : "Bonjour, Alice !"
 
-# Chemin du dossier à analyser
-dossier = "."
+def saluer(nom):
+    print(f"Bonjour, {nom} !")
 
-# Durée (en secondes) pour considérer un fichier comme "modifié récemment"
-seuil = 24 * 3600  # 24 heures
-
-now = time.time()
-
-for root, dirs, files in os.walk(dossier):
-    for file in files:
-        chemin = os.path.join(root, file)
-        if os.path.isfile(chemin):
-            mtime = os.path.getmtime(chemin)
-            if now - mtime < seuil:
-                print(f"Modifié récemment : {chemin}")
+# Exemple d'appel :
+saluer("Alice")
